@@ -59,23 +59,23 @@ async def sleepybot(time):
 @register(outgoing=True, pattern="^;shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Mematikan Lord-Userbot....`")
+    await event.edit("`Mematikan Fahri-Userbot....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "Alvin-Userbot Has Turned Off")
+                                        "Fahri-Userbot Has Turned Off")
     await bot.disconnect()
 
 
 @register(outgoing=True, pattern="^;restart$")
 async def killdabot(event):
-    await event.edit("Restarting Alvin-Userbot...")
+    await event.edit("Restarting Fahri-Userbot...")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "Alvin-Userbot Has Been Restarted")
+                                        "Fahri-Userbot Has Been Restarted")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
@@ -87,7 +87,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's something for you to read:\n"
-        "\n[Alvin-Userbot README](https://github.com/fahrial2310/Alvin-UserBot/blob/main/README.md)"
+        "\n[Fahri-Userbot README](https://github.com/fahrial2310/Fahri-UserBot/blob/main/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-GDrive-11-02)"
         "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
@@ -114,7 +114,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "☠️ **Repo :** [☠️Alvin-Userbot☠️](https://github.com/fahrial2310/Alvin-Userot)\n\n☠️ **Owner:** [Master](t.me/Alvin_junior)\n **☠️Support:** [Support](https://t.me/Alvin_image_editor_group)\n **☠️Updates:** [Updates](https://t.me/Alvin_image_editor)\n **☠️UserBot Group:** [USERBOT](https://t.me/alvin_userbot_group) "
+        "☠️ **Repo :** [☠️Alvin-Userbot☠️](https://github.com/fahrial2310/Fahri-UserBot)\n\n☠️ **Owner:** [Master](t.me/Alvin_junior)\n **☠️Support:** [Support](https://t.me/Alvin_image_editor_group)\n **☠️Updates:** [Updates](https://t.me/Alvin_image_editor)\n **☠️UserBot Group:** [USERBOT](https://t.me/alvin_userbot_group) "
     )
 
 
