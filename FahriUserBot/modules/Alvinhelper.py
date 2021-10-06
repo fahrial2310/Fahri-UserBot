@@ -13,8 +13,8 @@ async def usit(e):
     await e.edit(
         f"**Hi master {DEFAULTUSER} If You Don't Know The Command To Order Me Type** `;help` Or you can ask for help to:\n"
         "\n[Telegram](t.me/Alvin_junior)"
-        "\n[Repo](https://github.com/fahrial2310/Alvin-Userbot)"
-        "\n[Instagram](https://www.instagram.com/mfahrial2310/)"
+        "\n[Repo](https://github.com/fahrial2310/Fahri--Userbot)"
+        "\n[Instagram](https://www.instagram.com/fahri2310/)"
         "\n[Github](https://github.com/fahrial2310)"
         "\n[Youtube](https://bit.ly/Alvin_JuniorYT)"
     )
@@ -25,7 +25,7 @@ async def usit(e):
 async def var(m):
     await m.edit(
         f"**Here List of Vars From {DEFAULTUSER}:**\n"
-        "\n[LIST VARS](https://github.com/fahrial2310/Alvin-UserBot/blob/Alvin-UserBot/varshelper.txt)")
+        "\n[LIST VARS](https://github.com/fahrial2310/Fahri-UserBot/blob/Fahri-UserBot/varshelper.txt)")
 
 
 CMD_HELP.update({
