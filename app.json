@@ -1,7 +1,7 @@
 {
-  "name": "Alvin-Userbot",
+  "name": "Fahri-UserBot",
   "description": "JustForFun.",
-  "logo": "https://telegra.ph/file/531dad90833db07c98b33.jpg",
+  "logo": "https://telegra.ph/file/c88f256d9fd8043c3a409.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/fahrial2310/Alvin-Userbot",
+  "repository": "https://github.com/fahrial2310/Fahri-UserBot",
   "telegram": "https://t.me/alvin_junior",
   "success_url": "https://t.me/Alvin_junior",
   "stack": "container",
