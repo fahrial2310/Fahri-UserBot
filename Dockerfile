@@ -1,11 +1,11 @@
 FROM koala21/kampangbot:buster
 
-RUN git clone -b FahriUserBot https://github.com/fahrial2310/Fahri-UserBot /root/userbot
-RUN mkdir /root/userbot/.bin
+RUN git clone -b FahriUserBot https://github.com/fahrial2310/Fahri-UserBot /root/FahriUserBot
+RUN mkdir /root/FahriUserBot/.bin
 RUN pip install --upgrade pip setuptools
-WORKDIR /root/userbot
+WORKDIR /root/FahriUserBot
 
 #Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/fahrial2310/Fahri-UserBot/Fahri-UserBot/requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/fahrial2310/Fahri-UserBot/FahriUserBot/requirements.txt
 
-CMD ["python3","-m","userbot"]
+CMD ["python3","-m","FahriUserBot"]
