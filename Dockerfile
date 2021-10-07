@@ -1,4 +1,4 @@
-FROM fahrial2310/Alvin-UserBot:buster
+FROM python:3.9.7-slim-buster
 
 RUN git clone -b FahriUserBot https://github.com/fahrial2310/Fahri-UserBot /root/userbot
 RUN mkdir /root/userbot/.bin
