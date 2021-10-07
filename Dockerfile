@@ -6,6 +6,6 @@ RUN pip install --upgrade pip setuptools
 WORKDIR /root/FahriUserBot
 
 #Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/fahrial2310/Fahri-UserBot/FahriUserBot/requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/fahrial2310/Fahri-UserBot/blob/FahriUserBot/requirements.txt
 
 CMD ["python3","-m","FahriUserBot"]
