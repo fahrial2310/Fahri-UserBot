@@ -114,7 +114,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "☠️ **Repo :** [☠️Alvin-Userbot☠️](https://github.com/fahrial2310/Fahri-UserBot)\n\n☠️ **Owner:** [Master](t.me/Alvin_junior)\n **☠️Support:** [Support](https://t.me/Alvin_image_editor_group)\n **☠️Updates:** [Updates](https://t.me/Alvin_image_editor)\n **☠️UserBot Group:** [USERBOT](https://t.me/alvin_userbot_group) "
+        "☠️ **Repo :** [☠️Alvin-Userbot☠️](https://github.com/fahrial2310/Fahri-UserBot)\n\n☠️ **get Your String Session :** [Pyogram(p)](https://replit.com/@fahrial2310/AlvinStringSession)\n\n☠️ **Deploy To Heroku :** [Deploy](https://heroku.com/deploy?template=https://github.com/fahrial2310/Fahri-UserBot/tree/Fahri-UserBot)\n\n☠️ **Owner:** [Master](t.me/Alvin_junior)\n **☠️Support:** [Support](https://t.me/Alvin_image_editor_group)\n **☠️Updates:** [Updates](https://t.me/Alvin_image_editor)\n **☠️UserBot Group:** [USERBOT](https://t.me/alvin_userbot_group)\n\n\n☠️ [Need Help To Deploy?](https://github.com/fahrial2310/Fahri-UserBot/blob/FahriUserBot/NeedHelpToDeploy%3F)"
     )
 
 
