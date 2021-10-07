@@ -10,7 +10,7 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import LOGSPAMMER, bot
+from FahriUserBot import LOGSPAMMER, bot
 
 
 def register(**args):
@@ -92,7 +92,7 @@ def register(**args):
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-                    text = "**Alvin-Userbot ERROR**\n"
+                    text = "**Fahri-Userbot ERROR**\n"
                     link = "please chat: @alvin_junior"
                     text += "for report error"
                     text += f"- just forward this message {link}.\n"
