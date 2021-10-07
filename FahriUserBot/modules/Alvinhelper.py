@@ -1,6 +1,6 @@
 """ Userbot module for other small commands. """
-from userbot import CMD_HELP, ALIVE_NAME
-from userbot.events import register
+from FahriUserBot import CMD_HELP, ALIVE_NAME
+from FahriUserBot.events import register
 
 
 # ================= CONSTANT =================
@@ -13,10 +13,12 @@ async def usit(e):
     await e.edit(
         f"**Hi master {DEFAULTUSER} If You Don't Know The Command To Order Me Type** `;help` Or you can ask for help to:\n"
         "\n[Telegram](t.me/Alvin_junior)"
-        "\n[Repo](https://github.com/fahrial2310/Fahri--Userbot)"
-        "\n[Instagram](https://www.instagram.com/fahri2310/)"
-        "\n[Github](https://github.com/fahrial2310)"
-        "\n[Youtube](https://bit.ly/Alvin_JuniorYT)"
+        "\n[Group Support](t.me/Alvin_image_editor_group)"
+        " | [Updates Channel](t.me/t.me/Alvin_image_editor)"
+        "\n[Repo](https://github.com/fahrial2310/Fahri-Userbot)"
+        "\n\n[Instagram](https://www.instagram.com/fahri2310/)"
+        " | [Github](https://github.com/fahrial2310)"
+        " | [Youtube](https://bit.ly/Alvin_JuniorYT)"
     )
     #don't edit or delete this
 
@@ -25,13 +27,13 @@ async def usit(e):
 async def var(m):
     await m.edit(
         f"**Here List of Vars From {DEFAULTUSER}:**\n"
-        "\n[LIST VARS](https://github.com/fahrial2310/Fahri-UserBot/blob/Fahri-UserBot/varshelper.txt)")
+        "\n[LIST VARS](https://github.com/fahrial2310/Fahri-UserBot/blob/FahriUserBot/varshelper.txt)")
 
 
 CMD_HELP.update({
     "helpers":
     ";mhelp\
-\nexplanation: Help For Alvin-Userbot.\
+\nexplanation: Help For Fahri-Userbot.\
 \n;vars\
 \nexplanation: To View Multiple List of Vars."
 })
