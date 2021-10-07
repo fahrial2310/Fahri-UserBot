@@ -1,4 +1,4 @@
-from userbot.utils import command, remove_plugin, load_module
+from FahriUserBot.utils import command, remove_plugin, load_module
 from pathlib import Path
 import asyncio
 import os
@@ -15,7 +15,7 @@ async def install(event):
         try:
             downloaded_file_name = await event.client.download_media(  # pylint:disable=E0602
                 await event.get_reply_message(),
-                "userbot/modules/"  # pylint:disable=E0602
+                "FahriUserBot/modules/"  # pylint:disable=E0602
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
