@@ -33,7 +33,7 @@ async def _(event):
         else:
             await event.edit("ID Group: `{}`\nID from user: `{}`".format(str(event.chat_id), str(r_msg.from_id)))
     else:
-        await event.edit("ID Group: `{}`".format(str(event.chat_id)))
+        await event.edit("ID Group: `{}`\nUser ID: `{}`".format(str(event.chat_id), str(r_msg.from_id)))
 
 
 @register(outgoing=True, pattern="^;link(?: |$)(.*)")
@@ -422,9 +422,7 @@ async def _(event):
 
 CMD_HELP.update({
     "chat":
-    ";getid\
-\nexplanation: Get ID from any Telegram media, or any user\
-\n\n;getbot\
+    ";getbot\"
 \nexplanation: get bot in all chat.\
 \n\n;logit\
 \nexplanation: Forward messages you have replied to in your bot log group.\
