@@ -1,7 +1,7 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot.events import register
-from userbot import bot, CMD_HELP
+from FahriUserBot.events import register
+from FahriUserBot import bot, CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\;id(?: |$)(.*)")
