@@ -20,7 +20,7 @@ from userbot.modules.admin import get_user_from_event
 from telethon.utils import pack_bot_file_id
 
 
-@register(outgoing=True, pattern="^;getid(?: |$)(.*)")
+@register(outgoing=True, pattern="^;id(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -422,7 +422,9 @@ async def _(event):
 
 CMD_HELP.update({
     "chat":
-    ";getbot\"
+    ";getid\
+\nexplanation: get user id\
+\n\n;getbot\
 \nexplanation: get bot in all chat.\
 \n\n;logit\
 \nexplanation: Forward messages you have replied to in your bot log group.\
