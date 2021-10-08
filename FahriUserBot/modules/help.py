@@ -32,8 +32,8 @@ async def help(Alvin):
                         "`santet` | `image_search` | `currency` | `google` | `wiki`| `ud` | `tts` | `translate`| `youtube` | `rip`|\n"
                         "`removebg` | `ocr` | `qrcode` | `barcode` | `paste` | `getpaste` | `nekobin` | `direct` | `screenshot` | `sed` | `snips` | `spammer` | `spotifynow` | `ssvideo`|\n"
                         "`stickers` | `stickers2` | `sysd` | `botver` | `pip` | `alive` | `tag_all` | `telegraph` | `timedate` | `torrent`|\n" 
-                        "`transform` | `updater` |`downloader` | `getid` | `waifu` | `wallpaper` | `weather`|\n"
+                        "`transform` | `updater` |`downloader` | `waifu` | `wallpaper` | `weather`|\n"
                         "`webupload` | `welcome`|  `info` | `ping` | `signal` | `xiaomi` | `zipfile`")
-        await Alvin.reply("\n**HOW TO USE????,** **EXAMPLE:**\n**TYPE** `;help afk` **FOR INFORMATION MODULES**GO TO**GROUP SUPPORT:** [CLICK HERE TO GO](t.me/Alvin_Userbot_Group)")
+        await Alvin.reply("\n**HOW TO USE????,** **EXAMPLE:**\n**TYPE** `;help afk` **FOR INFORMATION MODULES**GO TO**GROUP SUPPORT**\n[CLICK HERE TO GO](t.me/Alvin_Userbot_Group)")
         await asyncio.sleep(1000)
         await Alvin.delete()
