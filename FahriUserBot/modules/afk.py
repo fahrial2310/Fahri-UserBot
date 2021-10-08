@@ -7,7 +7,7 @@ from random import choice, randint
 from telethon.events import StopPropagation
 from telethon.tl.functions.account import UpdateProfileRequest
 
-from userbot import (  # noqa pylint: disable=unused-import isort:skip
+from FahriUserBot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
     BOTLOG,
     BOTLOG_CHATID,
@@ -225,7 +225,7 @@ async def afk_on_pm(sender):
             time %= 60
             seconds = time
             if days == 1:
-                afk_since = "**Kemarin**"
+                afk_since = "**yesterday**"
             elif days > 1:
                 if days > 6:
                     date = now + \
@@ -266,8 +266,8 @@ async def afk_on_pm(sender):
 CMD_HELP.update({
     "afk":
     "**Modules: *AFK*\
-    \n\n**• command:** _;afk_\
-    \n**➥ explanation:** __Anyone Who Reply, Tag, Or Chat You__\
-__They Will Know The Reason You Are OFF__.\n\n**Note:** *AFK Can Be Done And Canceled Anywhere.*\
+    \n\n**• command:** ;afk\
+    \n**➥ explanation:** Anyone Who Reply, Tag, Or Chat You\
+  They Will Know The Reason You Are OFF__.\n\n**Note:** *AFK Can Be Done And Canceled Anywhere.*\
 "
 })
