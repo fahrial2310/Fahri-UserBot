@@ -4,7 +4,7 @@ from FahriUserBot.events import register
 from FahriUserBot import bot, CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\;id(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\;getid(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -40,6 +40,6 @@ async def _(event):
 
 CMD_HELP.update({
     "getid":
-    ";getid"
+    ";id"
     "\nusage: get group id and user id"
 })
