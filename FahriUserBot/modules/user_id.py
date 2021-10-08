@@ -39,7 +39,7 @@ async def _(event):
 
 
 CMD_HELP.update({
-    "getid":
+    "id":
     ";id"
     "\nusage: get group id and user id"
 })
