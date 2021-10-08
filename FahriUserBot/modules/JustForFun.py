@@ -2,8 +2,8 @@ from telethon import events
 
 import asyncio
 
-from userbot.events import register
-from userbot import CMD_HELP, bot, ALIVE_NAME
+from FahriUserBot.events import register
+from FahriUserBot import CMD_HELP, bot, ALIVE_NAME
 from collections import deque
 from telethon.errors.rpcerrorlist import MessageIdInvalidError
 import random
@@ -13,7 +13,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -93,7 +93,7 @@ async def _(event):
 """Available Commands: .gift"""
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -111,18 +111,18 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-            "⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜",
-            "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜",
-            "⬛⬛⬜⬜⬜\n⬜👇⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜",
-            "⬛⬛⬛⬜⬜\n⬜⬜👇⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜\n⬜⬜⬜⬜⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-            "⬛⬛⬛⬜⬜\n⬜⬜👇⬜⬜\n⬜⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-            "⬛⬛⬜⬜⬜\n⬜👇⬜⬜⬜\n⬜[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-            "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n[🎁](https://github.com/fahrial2310/Alvin-UserBot)⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜",
+            "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜",
+            "⬛⬛⬜⬜⬜\n⬜👇⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜",
+            "⬛⬛⬛⬜⬜\n⬜⬜👇⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜\n⬜⬜⬜⬜⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬛⬛⬛⬜⬜\n⬜⬜👇⬜⬜\n⬜⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬛⬛⬜⬜⬜\n⬜👇⬜⬜⬜\n⬜[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n[🎁](https://github.com/fahrial2310/Fahri-UserBot)⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
             "⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
             "⬜⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜",
             "⬜⬜⬜\n⬜⬜⬜\n⬜⬜⬜"
@@ -136,7 +136,7 @@ async def _(event):
             await event.edit(animation_chars[i % 17])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -176,7 +176,7 @@ async def _(event):
             await event.edit(animation_chars[i % 12])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -212,7 +212,7 @@ async def _(event):
             await event.edit(animation_chars[i % 103])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -251,7 +251,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -289,7 +289,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -328,7 +328,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -367,7 +367,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -400,7 +400,7 @@ async def _(event):
             await event.edit(animation_chars[i % 7])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -473,7 +473,7 @@ async def _(event):
         await event.edit("EVERyBOdy wAs GanGeSTar UNtIL I ArRivEd 😎😎😎")
 
 
-@bot.on(events.NewMessage(pattern=r";.(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r";(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -510,7 +510,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -542,7 +542,7 @@ async def _(event):
             "⬜⬜⬜⬜⬜⬜⬜\n⬜⬛⬛⬛⬛⬛⬜\n⬜⬛⬜⬜⬜⬛⬜\n⬜⬛⬜⬛⬜⬛⬜\n⬜⬛⬜⬜⬜⬛⬜\n⬜⬛⬛⬛⬛⬛⬜\n⬜⬜⬜⬜⬜⬜⬜",
             "⬛⬛⬛⬛⬛\n⬛⬜⬜⬜⬛\n⬛⬜⬛⬜⬛\n⬛⬜⬜⬜⬛\n⬛⬛⬛⬛⬛",
             "⬜⬜⬜\n⬜⬛⬜\n⬜⬜⬜",
-            "[👉🔴👈](t.me/heyworld)"]
+            "[👉🔴👈](t.me/Alvin_Image_editor)"]
 
         for i in animation_ttl:
 
@@ -551,7 +551,7 @@ async def _(event):
             await event.edit(animation_chars[i % 15])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -592,7 +592,7 @@ async def _(event):
             await event.edit(animation_chars[i % 15])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -753,7 +753,7 @@ async def _(event):
             await event.edit(animation_chars[i % 549755813888])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -790,7 +790,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -826,7 +826,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -887,7 +887,7 @@ async def _(event):
     await event.delete()
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -1008,7 +1008,7 @@ async def _(event):
             await event.edit(animation_chars[i % 20])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -1052,7 +1052,7 @@ async def _(event):
             await event.edit(animation_chars[i % 17])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -1133,7 +1133,7 @@ async def _(event):
             await event.edit(animation_chars[i % 27])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -1187,7 +1187,7 @@ async def _(event):
             await event.edit(animation_chars[i % 72])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -1210,7 +1210,7 @@ async def _(event):
             await event.edit(animation_chars[i % 5])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -1247,7 +1247,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -1693,7 +1693,7 @@ async def _(event):
         await event.edit("`\"If we put solar panels above parking lots, then our cars wouldn't get hot and we would have a lot of clean energy.\"`")
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -1989,7 +1989,7 @@ async def _(event):
         await event.edit("`\"What’s something you misunderstood as a child and only realized much later was wrong?\"`")
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2026,7 +2026,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2063,7 +2063,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2100,7 +2100,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2137,7 +2137,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2174,7 +2174,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2224,7 +2224,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2264,7 +2264,7 @@ async def _(event):
             await event.edit(animation_chars[i % 6])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2304,7 +2304,7 @@ async def _(event):
             await event.edit(animation_chars[i % 6])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2358,7 +2358,7 @@ async def _(event):
             await event.edit(animation_chars[i % 14])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2410,7 +2410,7 @@ async def _(event):
             await event.edit(animation_chars[i % 13])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -2451,7 +2451,7 @@ async def _(event):
             await event.edit(animation_chars[i % 15])
 
 
-@bot.on(events.NewMessage(pattern=r"\;(;*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\;(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
