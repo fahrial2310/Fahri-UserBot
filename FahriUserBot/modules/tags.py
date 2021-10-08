@@ -6,8 +6,8 @@ from telethon.tl.types import UserStatusOnline as onn
 from telethon.tl.types import UserStatusRecently as rec
 from telethon.utils import get_display_name
 from telethon import custom, events
-from userbot import CMD_HELP, bot
-from userbot.events import register
+from FahriUserBot import CMD_HELP, bot
+from FahriUserBot.events import register
 
 @register(outgoing=True, pattern=r"^;tags(?: |$)(on|off|all|bots|rec|admins|owner)?")
 async def _(event):
