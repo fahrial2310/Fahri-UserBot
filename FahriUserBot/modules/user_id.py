@@ -40,6 +40,6 @@ async def _(event):
 
 CMD_HELP.update({
     "getid":
-    ";id"
-    "\nUsage: Reply To User Message To Get His ID."
+    ";getid"
+    "\nusage: get group id and user id"
 })
