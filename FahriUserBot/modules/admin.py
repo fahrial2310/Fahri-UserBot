@@ -25,8 +25,8 @@ from telethon.tl.types import (
     PeerChat,
 )
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from userbot.events import register
+from FahriUserBot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from FahriUserBot.events import register
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "_image is to small_"
@@ -576,7 +576,7 @@ async def rm_deletedacc(show):
         )
 
 
-@register(outgoing=True, pattern=r"^\.admins$")
+@register(outgoing=True, pattern=r"^\;admins$")
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
