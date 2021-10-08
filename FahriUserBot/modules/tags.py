@@ -25,7 +25,7 @@ async def _(event):
         users = users + 1
         x = bb.status
         y = bb.participant
-        if isinstance(x, onn):
+        if isinstance(x, on):
             o = o + 1
             if "on" in okk:
                 xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
@@ -42,14 +42,14 @@ async def _(event):
         if isinstance(y, owner):
             if "admin" or "owner" in okk:
                 xx += f"\n꧁[{get_display_name(bb)}](tg://user?id={bb.id})꧂"
-        if isinstance(y, admin):
+        if isinstance(y, admins):
             if "admin" in okk:
                 if not bb.deleted:
                     xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
         if "all" in okk:
             if not (bb.bot or bb.deleted):
                 xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
-        if "bot" in okk:
+        if "bots" in okk:
             if bb.bot:
                 xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
     await event.client.send_message(e.chat_id, xx)
@@ -59,19 +59,19 @@ async def _(event):
 CMD_HELP.update(
     {
         "tags": "**Modules:** Tags\
-        \n\n**explanation:** ;tagall\
+        \n\n**explanation:** ;tags all\
         \n**explanation:** Tag top 100 Member di grup.\
-        \n\n**explanation:** ;tagowner\
+        \n\n**explanation:** ;tags owner\
         \n**explanation:** Tag Owner group chat\
-        \n\n**explanation: **;tagadmins\
+        \n\n**explanation: **;tags admins\
         \n**explanation:** Tag Admins group chat.\
-        \n\n**explanation:** ;tagbots\
+        \n\n**explanation:** ;tags bots\
         \n**explanation:** Tag Bot di dalam grup.\
-        \n\n**explanation:** ;tagrec\
+        \n\n**explanation:** ;tags rec\
         \n**explanation: **Tag Member yang baru aktif.\
-        \n\n**explanation:** ;tagon\
+        \n\n**explanation:** ;tags on\
         \n**explanation: **Tag Member Yang Sedang On (hanya berfungsi jika privasi dimatikan)\
-        \n\n**explanation:** ;tagoff\
+        \n\n**explanation:** ;tags off\
         \n**explanation: **Tag Member Yang Sedang Off (hanya berfungsi jika privasi dimatikan)\
         "
     }
