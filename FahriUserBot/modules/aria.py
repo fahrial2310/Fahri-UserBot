@@ -6,9 +6,9 @@ from subprocess import PIPE, Popen
 import aria2p
 from requests import get
 
-from userbot import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
-from userbot.events import register
-from userbot.utils import humanbytes
+from FahriUserBot import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
+from FahriUserBot.events import register
+from FahriUserBot.utils import humanbytes
 
 
 def subprocess_run(cmd):
