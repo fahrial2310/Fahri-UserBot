@@ -8,9 +8,9 @@ import time
 from bs4 import BeautifulSoup
 from requests import get
 
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
-from userbot.events import register
-from userbot.utils.tools import human_to_bytes, humanbytes, md5, time_formatter
+from FahriUserBot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
+from FahriUserBot.events import register
+from FahriUserBot.utils.tools import human_to_bytes, humanbytes, md5, time_formatter
 
 GITHUB = "https://github.com"
 
