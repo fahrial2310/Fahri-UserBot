@@ -1,7 +1,7 @@
 from sqlalchemy.exc import IntegrityError
 
-from userbot import CMD_HELP, bot
-from userbot.events import register
+from FahriUserBot import CMD_HELP, bot
+from FahriUserBot.events import register
 
 
 @register(outgoing=True, disable_edited=True, pattern=r"^\;fban(?: |$)(.*)")
