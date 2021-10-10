@@ -1,6 +1,6 @@
 from telethon.tl.types import InputMediaDice
-from userbot.events import register
-from userbot import CMD_HELP
+from FahriUserBot.events import register
+from FahriUserBot import CMD_HELP
 
 
 @register(outgoing=True, pattern="^;dice(?: |$)(.*)")
