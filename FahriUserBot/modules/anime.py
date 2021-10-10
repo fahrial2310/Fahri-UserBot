@@ -18,8 +18,8 @@ from telethon.tl.types import (DocumentAttributeAnimated,
                                DocumentAttributeFilename, MessageMediaDocument)
 from telethon.utils import is_image, is_video
 
-from userbot import CMD_HELP
-from userbot.events import register
+from FahriUserBot import CMD_HELP
+from FahriUserBot.events import register
 
 jikan = Jikan()
 
