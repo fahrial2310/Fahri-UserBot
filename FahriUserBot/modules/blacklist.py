@@ -1,9 +1,9 @@
 import io
 import re
 
-import userbot.modules.sql_helper.blacklist_sql as sql
-from userbot import CMD_HELP
-from userbot.events import register
+import FahriUserBot.modules.sql_helper.blacklist_sql as sql
+from FahriUserBot import CMD_HELP
+from FahriUserBot.events import register
 
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
