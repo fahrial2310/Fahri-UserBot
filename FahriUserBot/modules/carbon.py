@@ -4,8 +4,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from urllib.parse import quote_plus
 from asyncio import sleep
-from userbot import CHROME_DRIVER, CMD_HELP, GOOGLE_CHROME_BIN
-from userbot.events import register
+from FahriUserBot import CHROME_DRIVER, CMD_HELP, GOOGLE_CHROME_BIN
+from FahriUserBot.events import register
 
 
 CARBONLANG = "auto"
