@@ -1,6 +1,6 @@
 from covid import Covid
-from userbot import CMD_HELP
-from userbot.events import register
+from FahriUserBot import CMD_HELP
+from FahriUserBot.events import register
 
 
 @register(outgoing=True, pattern="^;covid (.*)")
