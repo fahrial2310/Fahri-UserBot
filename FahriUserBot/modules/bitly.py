@@ -1,7 +1,7 @@
 from bitlyshortener import Shortener
 from re import match
-from userbot import BITLY_TOKEN, BOTLOG, BOTLOG_CHATID
-from userbot.events import register
+from FahriUserBot import BITLY_TOKEN, BOTLOG, BOTLOG_CHATID
+from FahriUserBot.events import register
 
 
 @register(outgoing=True, pattern=r"^\;bitly(?: |$)(.*)")
