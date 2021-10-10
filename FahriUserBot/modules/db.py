@@ -3,8 +3,8 @@
 from platform import uname
 
 
-from userbot import ALIVE_NAME, BOT_VER, is_mongo_alive, is_redis_alive
-from userbot.events import register
+from FahriUserBot import ALIVE_NAME, BOT_VER, is_mongo_alive, is_redis_alive
+from FahriUserBot.events import register
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
