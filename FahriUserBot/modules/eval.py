@@ -2,8 +2,8 @@ import asyncio
 from os import remove
 from sys import executable
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, TERM_ALIAS
-from userbot.events import register
+from FahriUserBot import BOTLOG, BOTLOG_CHATID, CMD_HELP, TERM_ALIAS
+from FahriUserBot.events import register
 
 
 @register(outgoing=True, pattern=r"^\;eval(?: |$)(.*)")
