@@ -5,7 +5,7 @@ import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterDocument
-from userbot.events import register
+from FahriUserBot.events import register
 
 
 @register(outgoing=True, pattern="^;cs(?: |$)(.*)")
