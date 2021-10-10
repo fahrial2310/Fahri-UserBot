@@ -166,7 +166,7 @@ BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 TERM_ALIAS = os.environ.get("TERM_ALIAS", "Fahri-UserBot")
 
 # Bot version
-BOT_VER = os.environ.get("BOT_VER", "8.0")
+BOT_VER = os.environ.get("BOT_VER", "Beta")
 
 # Default .alive username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
@@ -229,7 +229,7 @@ BOT_USERNAME = os.environ.get("BOT_USERNAME") or None
 
 # Init Mongo
 MONGOCLIENT = MongoClient(MONGO_URI, 27017, serverSelectionTimeoutMS=1)
-MONGO = MONGOCLIENT.userbot
+MONGO = MONGOCLIENT.FahriUserBot
 
 
 def is_mongo_alive():
@@ -398,7 +398,7 @@ with bot:
             if event.query.user_id == uid and query.startswith("@UserButt"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
-                    "please use .help for command!!",
+                    "please use ;help for command!!",
                     text="{}\n\n**☠️ this is module i have:** `{}`\n               \n**☠️ list module of Alvin-UserBot:** \n".format(
                         "**☠️Fahri-UserBot☠️**",
                         len(dugmeler),
@@ -409,7 +409,7 @@ with bot:
             elif query.startswith("tb_btn"):
                 result = builder.article(
                     "Help for Fahri✗Userbot ",
-                    text="Daftar Modul",
+                    text="list modules",
                     buttons=[],
                     link_preview=True)
             else:
@@ -453,7 +453,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Please Deploy Your Own Alvin-Userbot, Don't Use Alvin's {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Please Deploy Your Own Fahri-UserBot, Don't Use Alvin's {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
