@@ -4,8 +4,8 @@ import os.path
 import time
 from os.path import exists, isdir
 
-from userbot.events import register
-from userbot.utils import humanbytes
+from FahriUserBot.events import register
+from FahriUserBot.utils import humanbytes
 
 MAX_MESSAGE_SIZE_LIMIT = 4095
 
