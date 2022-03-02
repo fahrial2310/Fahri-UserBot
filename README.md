@@ -1,4 +1,4 @@
-# <p align="center">FAHRI-USERBOT</p>
+# A new Version Of [Alvin-Userbot](github.com/fahrial2310/Alvin-UserBot)
 ![Fahri Userbot Logo](https://telegra.ph/file/c88f256d9fd8043c3a409.jpg)
 
 <p align="center">
@@ -11,7 +11,9 @@
   </a>
 </p>  
 
-## DEPLOY ALVIN-USERBOT
+
+
+## DEPLOY FAHRI-USERBOT
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fahrial2310/Fahri-UserBot/tree/FahriUserBot)
 
@@ -19,6 +21,13 @@
 [![Run on Repl.it](https://repl.it/badge/github/fahrial2310/AlvinStringSession)](https://replit.com/@fahrial2310/AlvinStringSession)
 <br>
 </p>
+
+## What a new?
+
+Fahri-UserBot has upgrade delete command
+in [delete.py](https://github.com/fahrial2310/Fahri-UserBot/blob/FahriUserBot/FahriUserBot/modules/delete.py) file,
+the delete command can be used with time,
+3 seconds-30 seconds
 
 ## Credit
 Thank You So Much For
