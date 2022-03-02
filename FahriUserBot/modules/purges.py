@@ -65,28 +65,6 @@ async def purgeme(delme):
     i = 1
     await smsg.delete()
 
-
-@register(outgoing=True, pattern=r"^\;del$")
-async def delete_it(delme):
-    msg_src = await delme.get_reply_message()
-    if delme.reply_to_msg_id:
-        try:
-            await msg_src.delete()
-            await delme.delete()
-            """
-            if BOTLOG:
-                await delme.client.send_message(
-                    BOTLOG_CHATID, "_master, succesfully delete message ツ_")
-            """
-        except rpcbaseerrors.BadRequestError:
-            await delme.edit("cannot delete message")
-            """
-            if BOTLOG:
-                await delme.client.send_message(
-                    BOTLOG_CHATID, "cannot delete message")
-            """
-
-
 @register(outgoing=True, pattern=r"^\;edit")
 async def editer(edit):
     message = edit.text
@@ -126,8 +104,6 @@ async def selfdestruct(destroy):
 CMD_HELP.update({"purge": ">;purge"
                   "\nUsage: Clears all messages starting from the reply message.",
                   "purgeme": ">;purgeme <number>"
-                  "\nUsage: Delete the number of your messages, which you want to delete.",
-                  "del": ">;del"
                   "\nUsage: Delete message, reply to message.",
                   "edit": ">;edit <new message>"
                   "\nUsage: Replace your last message with <new message>.",
