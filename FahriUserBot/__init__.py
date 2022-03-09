@@ -277,7 +277,7 @@ if STRING_SESSION:
     bot = TelegramClient(StringSession(STRING_SESSION), API_KEY, API_HASH)
 else:
     # pylint: disable=invalid-name
-    bot = TelegramClient("userbot", API_KEY, API_HASH)
+    bot = TelegramClient("FahriUserBot", API_KEY, API_HASH)
 
 
 async def check_botlog_chatid():
@@ -388,7 +388,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.reply("Fahri-UserBot, build your UserBot it self [Click Here](https://github.com/fahrial2310/Fahri-UserBot.git)")
             else:
-                await event.reply(f"`My Master {ALIVE_NAME}\n\nHow Are You?`")
+                await event.reply(f"My Master {ALIVE_NAME}\nHow Are You?")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -430,10 +430,10 @@ with bot:
                                 "☠️ Channel Updates", url=f"https://t.me/Alvin_image_editor"),],
                         [
                             InlineKeyboardButton(
-                                "☠️ Deploy To Heroku ☠️", url=f"https://heroku.com/deploy?template=https://github.com/fahrial2310/Alvin-UserBot/tree/Alvin-UserBot"),],
+                                "☠️ Deploy To Heroku ☠️", url=f"https://heroku.com/deploy?template=https://github.com/fahrial2310/Fahri-UserBot/tree/FahriUserBot"),],
                         [
                             InlineKeyboardButton(
-                                "Need Help To Deploy?", url=f"https://github.com/fahrial2310/Alvin-UserBot/blob/Alvin-UserBot/NeedHelpToDeploy%3F"),],
+                                "Need Help To Deploy?", url=f"https://github.com/fahrial2310/Fahri-UserBot/blob/FahriUserBot/NeedHelpToDeploy%3F"),],
                     ],
                     link_preview=False,
                 )
@@ -487,7 +487,7 @@ with bot:
                 if len(cmdhel) > 150:
                     help_string = (
                         str(CMD_HELP[modul_name]).replace('`', '')[:150] + "..."
-                        + "\n\nRead Next Text Type .help"
+                        + "\n\nRead Next Text Type ;help"
                         + modul_name
                         + " "
                     )
