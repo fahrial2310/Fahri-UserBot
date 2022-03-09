@@ -8,4 +8,4 @@ WORKDIR /root/userbot
 #Install python requirements
 RUN pip3 install -r https://raw.githubusercontent.com/fahrial2310/Fahri-UserBot/FahriUserBot/requirements.txt
 
-CMD ["python3","-m","userbot"]
+CMD ["python3","-m","FahriUserBot"]
